@@ -1,0 +1,10 @@
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\bin\Debug\Prueba.exe.config
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\bin\Debug\Prueba.exe
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\bin\Debug\Prueba.pdb
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\bin\Debug\Entidades.dll
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\bin\Debug\Entidades.pdb
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\obj\Debug\Prueba.csprojAssemblyReference.cache
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\obj\Debug\Prueba.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\obj\Debug\Prueba.csproj.CopyComplete
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\obj\Debug\Prueba.exe
+C:\Users\Daniel\source\repos\PrimerParcial\Prueba\obj\Debug\Prueba.pdb
