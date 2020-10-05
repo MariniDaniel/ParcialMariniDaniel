@@ -1,9 +1,0 @@
-C:\Users\Daniel\source\repos\PrimerParcial\Frm_Stocks\Frm_Stock\bin\Debug\Frm_Stock.exe.config
-C:\Users\Daniel\source\repos\PrimerParcial\Frm_Stocks\Frm_Stock\bin\Debug\Frm_Stock.exe
-C:\Users\Daniel\source\repos\PrimerParcial\Frm_Stocks\Frm_Stock\bin\Debug\Frm_Stock.pdb
-C:\Users\Daniel\source\repos\PrimerParcial\Frm_Stocks\Frm_Stock\obj\Debug\Frm_Stock.Form1.resources
-C:\Users\Daniel\source\repos\PrimerParcial\Frm_Stocks\Frm_Stock\obj\Debug\Frm_Stock.Properties.Resources.resources
-C:\Users\Daniel\source\repos\PrimerParcial\Frm_Stocks\Frm_Stock\obj\Debug\Frm_Stock.csproj.GenerateResource.cache
-C:\Users\Daniel\source\repos\PrimerParcial\Frm_Stocks\Frm_Stock\obj\Debug\Frm_Stock.csproj.CoreCompileInputs.cache
-C:\Users\Daniel\source\repos\PrimerParcial\Frm_Stocks\Frm_Stock\obj\Debug\Frm_Stock.exe
-C:\Users\Daniel\source\repos\PrimerParcial\Frm_Stocks\Frm_Stock\obj\Debug\Frm_Stock.pdb
