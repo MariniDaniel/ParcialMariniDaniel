@@ -100,7 +100,7 @@
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
             this.btnAgregar.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnAgregar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAgregar.Location = new System.Drawing.Point(87, 378);
+            this.btnAgregar.Location = new System.Drawing.Point(70, 345);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(178, 69);
             this.btnAgregar.TabIndex = 13;
@@ -118,6 +118,7 @@
             this.picAgregarProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAgregarProducto.TabIndex = 2;
             this.picAgregarProducto.TabStop = false;
+         
             // 
             // FrmAgregarProducto
             // 

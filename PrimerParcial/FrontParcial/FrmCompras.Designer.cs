@@ -237,6 +237,7 @@
             this.btnClienteNuevo.TabIndex = 27;
             this.btnClienteNuevo.Text = "Cliente Nuevo";
             this.btnClienteNuevo.UseVisualStyleBackColor = true;
+            this.btnClienteNuevo.Click += new System.EventHandler(this.btnClienteNuevo_Click);
             // 
             // FrmCompras
             // 
@@ -255,6 +256,8 @@
             this.Controls.Add(this.dtgListaInventario);
             this.Controls.Add(this.picPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Puesto De Venta";

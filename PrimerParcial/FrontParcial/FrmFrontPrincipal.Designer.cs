@@ -29,22 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFrontPrincipal));
-            this.picPrincipal = new System.Windows.Forms.PictureBox();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
+            this.picPrincipal = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPrincipal)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picPrincipal
-            // 
-            this.picPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPrincipal.Image = global::FrontParcial.Properties.Resources.PARCIAL1;
-            this.picPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.picPrincipal.Name = "picPrincipal";
-            this.picPrincipal.Size = new System.Drawing.Size(806, 452);
-            this.picPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPrincipal.TabIndex = 0;
-            this.picPrincipal.TabStop = false;
             // 
             // btnInventario
             // 
@@ -52,7 +42,7 @@
             this.btnInventario.BackColor = System.Drawing.Color.Transparent;
             this.btnInventario.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnInventario.Location = new System.Drawing.Point(631, 302);
+            this.btnInventario.Location = new System.Drawing.Point(489, 302);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(132, 112);
             this.btnInventario.TabIndex = 10;
@@ -66,13 +56,38 @@
             this.btnComprar.BackColor = System.Drawing.Color.Transparent;
             this.btnComprar.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnComprar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnComprar.Location = new System.Drawing.Point(459, 302);
+            this.btnComprar.Location = new System.Drawing.Point(656, 302);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(132, 112);
             this.btnComprar.TabIndex = 11;
             this.btnComprar.Text = "Realizar Compra";
             this.btnComprar.UseVisualStyleBackColor = false;
             this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVentas.BackColor = System.Drawing.Color.Transparent;
+            this.btnVentas.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnVentas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnVentas.Location = new System.Drawing.Point(21, 302);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(132, 112);
+            this.btnVentas.TabIndex = 12;
+            this.btnVentas.Text = "Ventas Realizadas";
+            this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
+            // picPrincipal
+            // 
+            this.picPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPrincipal.Image = global::FrontParcial.Properties.Resources.PARCIAL1;
+            this.picPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.picPrincipal.Name = "picPrincipal";
+            this.picPrincipal.Size = new System.Drawing.Size(806, 452);
+            this.picPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPrincipal.TabIndex = 0;
+            this.picPrincipal.TabStop = false;
             // 
             // FrmFrontPrincipal
             // 
@@ -81,6 +96,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.btnInventario);
             this.Controls.Add(this.picPrincipal);
@@ -102,6 +118,7 @@
         private System.Windows.Forms.PictureBox picPrincipal;
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnComprar;
+        private System.Windows.Forms.Button btnVentas;
     }
 }
 

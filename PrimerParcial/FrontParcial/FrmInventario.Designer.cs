@@ -39,6 +39,7 @@
             this.informacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockMenorA10ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaInventario)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -50,7 +51,7 @@
             this.btnAgregarProducto.BackColor = System.Drawing.Color.OliveDrab;
             this.btnAgregarProducto.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnAgregarProducto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(474, 252);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(474, 158);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(152, 157);
             this.btnAgregarProducto.TabIndex = 12;
@@ -145,12 +146,27 @@
             this.mostrarTotalToolStripMenuItem.Text = "Mostrar Total";
             this.mostrarTotalToolStripMenuItem.Click += new System.EventHandler(this.mostrarTotalToolStripMenuItem_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelar.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnCancelar.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancelar.Location = new System.Drawing.Point(474, 418);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(152, 73);
+            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // FrmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(638, 605);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dtgListaInventario);
             this.Controls.Add(this.btnAgregarProducto);
@@ -180,5 +196,6 @@
         private System.Windows.Forms.ToolStripMenuItem informacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockMenorA10ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mostrarTotalToolStripMenuItem;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

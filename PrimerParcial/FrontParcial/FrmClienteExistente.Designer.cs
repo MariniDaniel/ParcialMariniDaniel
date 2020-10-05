@@ -34,6 +34,7 @@
             this.lblCliente = new System.Windows.Forms.Label();
             this.dtgCliente = new System.Windows.Forms.DataGridView();
             this.btnFinalizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +94,7 @@
             // btnFinalizar
             // 
             this.btnFinalizar.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.Location = new System.Drawing.Point(184, 284);
             this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFinalizar.Name = "btnFinalizar";
@@ -103,12 +104,26 @@
             this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(394, 284);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(134, 57);
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.Text = "Salir";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // FrmClienteExistente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(585, 386);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.dtgCliente);
             this.Controls.Add(this.lblCliente);
@@ -128,5 +143,6 @@
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.DataGridView dtgCliente;
         private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

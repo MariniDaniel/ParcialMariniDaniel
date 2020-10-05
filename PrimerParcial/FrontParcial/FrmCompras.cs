@@ -54,11 +54,11 @@ namespace FrontParcial
         private void ActualizarLista()
         {
             dtgListaInventario.DataSource = null;
-            dtgListaInventario.DataSource = TiendaApu.MostrarListaProductos();  
+            dtgListaInventario.DataSource = TiendaApu.MostrarListaProductos();
         }
-        
+
         private void ActualizarListaCompra()
-        {       
+        {
             dtgCompras.DataSource = null;
             dtgCompras.DataSource = this.listaCompras;
 
@@ -119,19 +119,19 @@ namespace FrontParcial
                     }
                     else
                     {
-                        MessageBox.Show("No hay suficiente stock del producto solicitados");
+                        MessageBox.Show("No hay suficiente stock del producto solicitados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("La cantidad no puede ser 0 ni un numero negativo");
+                    MessageBox.Show("La cantidad no puede ser 0 ni un numero negativo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             else
             {
-                MessageBox.Show("Por favor, agregue cantidad antes de continuar");
+                MessageBox.Show("Por favor, agregue cantidad antes de continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.txtStock.Clear();
@@ -197,38 +197,49 @@ namespace FrontParcial
                 {
                     if (TiendaApu.ValidarCliente(auxClienteExistente.AuxCliente))
                     {
+
+
+                        TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteExistente.AuxCliente,
+                        this.listaCompras, this.auxMontoTotal));
                         // si es miembro de la familia Simpson aplica descuento
 
-                        MessageBox.Show("Por ser miembros de la familia Simpson tiene un descuentos del 13%");
+                        MessageBox.Show("Por ser miembro de la familia Simpson tiene un descuentos del 13%!!", "Descuento!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         double descuento = (auxMontoTotal) * 13 / 100;
                         double montoOriginal = auxMontoTotal;
                         auxMontoTotal = montoOriginal - descuento;
-                        MessageBox.Show(String.Format("Total compras: ${0:#,###.00}\n Descuentos (13%): S{1:#,###.00}\n Montos abonados: ${2:#,###.00}",
-                        montoOriginal, descuento, auxMontoTotal));
+                        MessageBox.Show(String.Format("Total compras: ${0:#,###.00}\n Descuentos (13%): S{1:#,###.00}\n Montos abonados: ${2:#,###.00}", "Informacion",
+                        montoOriginal, descuento, auxMontoTotal, MessageBoxButtons.OK, MessageBoxIcon.Exclamation));
+
+
+                        Venta venta1 = (new Venta(TiendaApu.EmpleadoLogueado, auxClienteExistente.AuxCliente,this.listaCompras, this.auxMontoTotal));
+                        TiendaApu.AgregarVenta(venta1);
+
+                     /*  TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteExistente.AuxCliente,
+                                    this.listaCompras, this.auxMontoTotal));*/
 
                         // genera comprobante de compra
 
-                        StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));              
+                        StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
                         auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
-                        auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));              
+                        auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
                         foreach (var item in this.listaCompras)
                         {
                             auxComprobante.WriteLine("Item: {0: -10} Precio: ${1:###,##.00}", item.Descripcion, item.Precio);
                         }
                         auxComprobante.WriteLine("Monto: ${0:###,##.00}", montoOriginal);
                         auxComprobante.WriteLine("Descuento SIMPSON: ${0:###,##.00}", descuento);
-                        auxComprobante.WriteLine("Total a abonar: ${0:###,##.00}", auxMontoTotal);                  
+                        auxComprobante.WriteLine("Total a abonar: ${0:###,##.00}", auxMontoTotal);
                         auxComprobante.WriteLine("Gracias! Vuelva prontosss");
                         auxComprobante.Close();
                     }
                     else
                     {
-                        MessageBox.Show(String.Format("Montos abonados: ${0:#,###.00}", auxMontoTotal));
+                        MessageBox.Show(String.Format("Montos abonados: ${0:#,###.00}", auxMontoTotal), "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // genera comprobante de compra
 
                         StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
-                       
+
                         auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
                         auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
                         auxComprobante.WriteLine(String.Format($"Cliente: {auxClienteExistente.AuxCliente.Nombre} {auxClienteExistente.AuxCliente.Apellido}"));
@@ -238,7 +249,7 @@ namespace FrontParcial
                         }
                         auxComprobante.WriteLine("Total a abonar: ${0:###,##.00}", auxMontoTotal);
                         auxComprobante.WriteLine("Gracias! Vuelva prontosss");
-                       
+
                         auxComprobante.Close();
                     }
 
@@ -247,7 +258,7 @@ namespace FrontParcial
                     TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteExistente.AuxCliente,
                         this.listaCompras, this.auxMontoTotal));
 
-                   
+
 
                     DialogResult = DialogResult.OK;
                 }
@@ -255,8 +266,61 @@ namespace FrontParcial
             }
             else
             {
-                MessageBox.Show("Debe seleccionar algun articulos para continuar con la compras!");
+                MessageBox.Show("Debe seleccionar algun articulos para continuar con la compras!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnClienteNuevo_Click(object sender, EventArgs e)
+        {
+
+            if (auxMontoTotal > 0)
+            {
+                FrmClienteNuevo auxClienteNuevo = new FrmClienteNuevo();
+
+
+                if (auxClienteNuevo.ShowDialog() == DialogResult.OK)
+                {
+                    if (TiendaApu.ValidarCliente(auxClienteNuevo.AuxCliente))
+                    {
+                        //Agrega venta, a la lista de ventas 
+
+                        TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteNuevo.AuxCliente, this.listaCompras, this.auxMontoTotal));
+                       /*
+                        Venta venta1 = (new Venta(TiendaApu.EmpleadoLogueado, auxClienteNuevo.AuxCliente, this.listaCompras, this.auxMontoTotal));
+                        TiendaApu.AgregarVenta(venta1);*/
+
+                        /*TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteNuevo.AuxCliente,
+                        this.listaCompras, this.auxMontoTotal));*/
+
+
+                        MessageBox.Show("En Hora buena por ser miembro de la familia Simpson tiene un descuentos del 13%", "Descuento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        double descuento = (auxMontoTotal * 13) / 100;
+                        double montoOriginal = auxMontoTotal;
+                        auxMontoTotal = montoOriginal - descuento;
+                        MessageBox.Show(String.Format("Total compras: ${0:#,###.00}\n Descuentos (13%): S{1:#,###.00}\n Montos abonados: ${2:#,###.00}",
+                       montoOriginal, descuento, auxMontoTotal), "Total", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show(String.Format("Montos abonados: ${0:#,###.00}", auxMontoTotal), "Total", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                        //Agrega venta, a la lista de ventas 
+
+                        TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteNuevo.AuxCliente,
+                        this.listaCompras, this.auxMontoTotal));
+
+                    }
+
+                    DialogResult = DialogResult.OK;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar algun articulos para continuar con la compras!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

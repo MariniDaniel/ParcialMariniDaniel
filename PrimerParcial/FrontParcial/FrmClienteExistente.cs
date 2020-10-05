@@ -68,7 +68,7 @@ namespace FrontParcial
             string apellido = (string)dtgCliente.CurrentRow.Cells["Apellido"].Value;
             int dni = (int)dtgCliente.CurrentRow.Cells["Dni"].Value;
 
-            //Clientes clienteAux = (Clientes)dtgCliente.CurrentRow.DataBoundItem;
+       
 
             auxCliente = new Clientes(nombre, apellido, dni);
             this.lblCliente.Text = String.Concat("Cliente: ", apellido, ", ", nombre);
@@ -78,6 +78,11 @@ namespace FrontParcial
         private void FrmClienteExistente_Load(object sender, EventArgs e)
         {
             CargarDatagrid();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

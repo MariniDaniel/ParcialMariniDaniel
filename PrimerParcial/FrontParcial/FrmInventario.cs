@@ -27,12 +27,7 @@ namespace FrontParcial
             ActualizarLista();
         }
 
-        private void btnQuitarProducto_Click_1(object sender, EventArgs e)
-        {
-            QuitarProducto quitar = new QuitarProducto();
-            quitar.ShowDialog();
-          
-        }
+     
 
         private void dtgLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -65,6 +60,11 @@ namespace FrontParcial
         private void mostrarTotalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ActualizarLista();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

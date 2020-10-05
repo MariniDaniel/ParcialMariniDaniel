@@ -17,3 +17,25 @@ C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\Fro
 C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmAgregarProducto.resources
 C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmLogin.resources
 C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmClienteExistente.resources
+C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmClienteNuevo.resources
+C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmVentas.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\bin\Debug\FrontParcial.exe.config
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\bin\Debug\FrontParcial.exe
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\bin\Debug\FrontParcial.pdb
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\bin\Debug\Entidades.dll
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\bin\Debug\Entidades.pdb
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmAgregarProducto.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmClienteExistente.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmClienteNuevo.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmCompras.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmFrontPrincipal.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmInventario.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmVentas.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.FrmLogin.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.Properties.Resources.resources
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.csproj.GenerateResource.cache
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.csproj.CopyComplete
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.exe
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\FrontParcial\obj\Debug\FrontParcial.pdb

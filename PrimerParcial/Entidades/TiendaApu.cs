@@ -111,6 +111,11 @@ namespace Entidades
         public static List<Producto> MostrarListaProductos()
         {
             return ListaProductos;
+        } 
+        
+        public static List<Venta> MostrarListaVentas()
+        {
+            return ListaVentas;
         }
 
         //Personas
@@ -132,6 +137,15 @@ namespace Entidades
         {
             return ListaPersonas;
         }
+
+
+        public static void AgregarVenta(Venta venta1)
+        {
+            ListaVentas.Add(venta1);
+
+
+        }
+
 
 
         public static List<Producto> MostrarStock10()//REVISANDO
@@ -179,9 +193,9 @@ namespace Entidades
         /// </summary>
         public static void HardcodeoUsuarios()
         {
-            listaUsuarios.Add("11", "12");
-            listaUsuarios.Add("IronMan", "Tony");
-            listaUsuarios.Add("Capitan", "America");
+            listaUsuarios.Add("ironman", "ironman");
+            listaUsuarios.Add("apu", "apu");
+            listaUsuarios.Add("fdavila", "davila1");
 
         }
 
@@ -252,9 +266,9 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Verifica si en una lista de tipo Persona existen objetos de tipo Cliente y crea una sublista
+        /// Verifica si en una lista de tipo Persona existen objetos de tipo Clientes y crea una lista Auxiliar
         /// </summary>
-        /// <returns>List<> de tipo Cliente</returns>
+        /// <returns>List<>AuxList de tipo Clientes</returns>
         public static List<Clientes> GetListaClientes()
         {
             List<Clientes> auxListaClientes = new List<Clientes>();
@@ -271,7 +285,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Crea un objeto de tipo Empleado referente al empleado logueado
+        /// Crea un objeto de tipo Empleado referente al empleado que inicio sesion
         /// </summary>
         /// <param name="usuarioActivo"></param>
         public static void AuxEmpleadoLogueado(string usuarioActivo)
@@ -289,6 +303,73 @@ namespace Entidades
                 }
             }
         }
+
+
+        /// <summary>
+        /// Filtra las ventas generadas por el empleado ID ingresado por parametro
+        /// </summary>
+        /// <param name="idEmpleado"></param>
+        /// <returns>una List<> de tipo Venta</returns>
+        public static List<Venta> GetListaVentas(int idEmpleado)
+        {
+            List<Venta> auxListaVentas = new List<Venta>();
+
+            foreach (Venta item in listaVentas)
+            {
+                if (item.Id == idEmpleado)
+                {
+                    auxListaVentas.Add(item);
+                }
+            }
+
+            return auxListaVentas;
+        }
+
+
+
+        /// <summary>
+        /// Hace una carga instantanea de 3 compras
+        /// </summary>
+        public static void HardcodeoCompras()
+        {
+            Empleados[] auxEmpleado = new Empleados[3] { new Empleados("Tony", "Stark", 112312, 1, "ironman"), new Empleados("Ezequiel", "Oggioni", 543222, 2, "Oggioni1"), new Empleados("Federico ","Davila", 312312, 3,"fdavila") };
+
+            Clientes[] auxCliente = new Clientes[3] { new Clientes("Ned", "Flanders", 333333), new Clientes("Ned", "Flanders", 333333), new Clientes("Homero", "Simpson", 123123) };
+
+            string[] descripcion = new string[3] { "Cerveza Duff", "Caramelo","Revista"};
+
+            float[] precio = new float[3] { 79, 54,12 };
+
+            int[] idProducto = new int[3] {150, 200,120};
+
+            for (int i = 0; i < auxCliente.Length; i++)
+            {
+                List<Compra> auxLista = new List<Compra>();
+                auxLista.Add(new Compra(descripcion[i], precio[i], idProducto[i]));
+                auxLista.Add(new Compra(descripcion[i], precio[i], idProducto[i]));
+                auxLista.Add(new Compra(descripcion[i], precio[i], idProducto[i]));
+                listaVentas.Add(new Venta(auxEmpleado[i], auxCliente[i], auxLista, (precio[i] * 3)));
+            }
+        }
+
+
+        /// <summary>
+        /// Hace una carga instantanea de 3 empleados
+        /// </summary>
+        public static void HardcodeoEmpleados()
+        {
+            string[] nombre = new string[3] { "Tony", "Apu", "Federico" };
+            string[] apellido = new string[3] { "Stark", "Nahasapeemapetilon", "Davila" };
+            int[] id = new int[3] { 1, 2, 3 };
+            int[] dni = new int[3] { 112312, 543222, 312312 };
+            string[] usuario = new string[3] { "ironman", "apu", "fdavila" };
+
+            for (int i = 0; i < 3; i++)
+            {
+                listaPersonas.Add(new Empleados(nombre[i], apellido[i], dni[i],id[i], usuario[i]));
+            }
+        }
+
         #endregion
 
     }

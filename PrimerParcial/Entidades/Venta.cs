@@ -42,7 +42,7 @@ namespace Entidades
 
         #region Properties
         /// <summary>
-        /// Getter de atributo apellido del objeto de tipo Empleado
+        /// Getter de atributo apellido del objeto de tipo Empleados
         /// </summary>
         public string ApellidoVendedor
         {
@@ -50,7 +50,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Getter de atributo ID del objeto de tipo Empleado
+        /// Getter de atributo ID del objeto de tipo Empleados
         /// </summary>
         public int Id
         {
@@ -93,7 +93,7 @@ namespace Entidades
         #endregion
 
 
-
+         
 
 
 

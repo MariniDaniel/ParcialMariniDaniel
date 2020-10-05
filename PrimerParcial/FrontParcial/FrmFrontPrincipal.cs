@@ -13,7 +13,7 @@ namespace FrontParcial
 {
     public partial class FrmFrontPrincipal : Form
     {
-        bool banderaLog = false;
+     
 
         public FrmFrontPrincipal()
         {
@@ -26,13 +26,18 @@ namespace FrontParcial
         {
             HardcodeoClientes();
             AgregarProductos();
-            FrmLogin login = new FrmLogin();
+            TiendaApu.HardcodeoEmpleados();
+            TiendaApu.HardcodeoCompras();
 
+            FrmLogin login = new FrmLogin();
 
             if (login.ShowDialog() == DialogResult.Yes)
             {
                 MessageBox.Show("Logueo exitoso", "Excelenteee", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                banderaLog = true;
+
+                TiendaApu.AuxEmpleadoLogueado(login.AuxUsuario);
+
+
             }
             else
             {
@@ -40,6 +45,7 @@ namespace FrontParcial
             }
 
 
+      
 
         }
 
@@ -148,6 +154,12 @@ namespace FrontParcial
             comprar.ShowDialog();
 
 
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            FrmVentas auxListaVentas = new FrmVentas();
+            auxListaVentas.Show();
         }
     }
 }

@@ -10,3 +10,9 @@ C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\Ent
 C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\Entidades\obj\Debug\Entidades.dll
 C:\Users\Daniel\Desktop\Facultad\Prog2Labo2\CAJA DE EMERGENCIA\PrimerParcial\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\Entidades\bin\Debug\Entidades.dll
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\Entidades\obj\Debug\Entidades.dll
+C:\Users\Daniel\Desktop\Familia2.0\PrimerParcial\Entidades\obj\Debug\Entidades.pdb
