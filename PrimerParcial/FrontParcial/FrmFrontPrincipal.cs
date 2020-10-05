@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,11 +15,13 @@ namespace FrontParcial
 {
     public partial class FrmFrontPrincipal : Form
     {
-     
+        SoundPlayer auxSonido;
+        string directorio = Directory.GetCurrentDirectory();
 
         public FrmFrontPrincipal()
         {
             InitializeComponent();
+            auxSonido = new SoundPlayer();
         }
 
 
@@ -28,13 +32,13 @@ namespace FrontParcial
             AgregarProductos();
             TiendaApu.HardcodeoEmpleados();
             TiendaApu.HardcodeoCompras();
+            auxSonido.SoundLocation = String.Concat(directorio, "/homero.wav");
 
             FrmLogin login = new FrmLogin();
 
             if (login.ShowDialog() == DialogResult.Yes)
             {
                 MessageBox.Show("Logueo exitoso", "Excelenteee", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 TiendaApu.AuxEmpleadoLogueado(login.AuxUsuario);
 
 
@@ -45,11 +49,11 @@ namespace FrontParcial
             }
 
 
-      
+
 
         }
 
-
+        #region Hardcodeo
         /// <summary>
         /// Hace una carga instantanea de 5 clientes
         /// </summary>
@@ -139,7 +143,7 @@ namespace FrontParcial
         }
 
 
-
+        #endregion 
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
@@ -160,6 +164,27 @@ namespace FrontParcial
         {
             FrmVentas auxListaVentas = new FrmVentas();
             auxListaVentas.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+        }
+
+        private void FrmFrontPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (MessageBox.Show("Esta seguro que desea salir?","Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                auxSonido.Play();
+                MessageBox.Show("Gracias!! Vuelva prontosss","Despedida");
+
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace FrontParcial
 
         List<Compra> listaCompras;
         double auxMontoTotal = 0;
+        SoundPlayer auxSonido;
         string directorio = Directory.GetCurrentDirectory();
 
         #region Properties
@@ -45,7 +47,7 @@ namespace FrontParcial
         public FrmCompras()
         {
             InitializeComponent();
-
+            auxSonido = new SoundPlayer();
         }
         #endregion
 
@@ -66,8 +68,9 @@ namespace FrontParcial
 
         private void FrmCompras_Load(object sender, EventArgs e)
         {
-            listaCompras = new List<Compra>();
+            listaCompras = new List<Compra>();          
             ActualizarLista();
+            auxSonido.SoundLocation = String.Concat(directorio, "/duff.wav");
 
         }
 
@@ -187,6 +190,12 @@ namespace FrontParcial
 
         }
 
+
+        /// <summary>
+        /// Cliente existente en momento de compra
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClienteExiste_Click(object sender, EventArgs e)
         {
             if (auxMontoTotal > 0)
@@ -214,9 +223,7 @@ namespace FrontParcial
                         Venta venta1 = (new Venta(TiendaApu.EmpleadoLogueado, auxClienteExistente.AuxCliente,this.listaCompras, this.auxMontoTotal));
                         TiendaApu.AgregarVenta(venta1);
 
-                     /*  TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteExistente.AuxCliente,
-                                    this.listaCompras, this.auxMontoTotal));*/
-
+              
                         // genera comprobante de compra
 
                         StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
@@ -258,8 +265,7 @@ namespace FrontParcial
                     TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteExistente.AuxCliente,
                         this.listaCompras, this.auxMontoTotal));
 
-
-
+                    auxSonido.Play();
                     DialogResult = DialogResult.OK;
                 }
 
@@ -285,14 +291,7 @@ namespace FrontParcial
                         //Agrega venta, a la lista de ventas 
 
                         TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteNuevo.AuxCliente, this.listaCompras, this.auxMontoTotal));
-                       /*
-                        Venta venta1 = (new Venta(TiendaApu.EmpleadoLogueado, auxClienteNuevo.AuxCliente, this.listaCompras, this.auxMontoTotal));
-                        TiendaApu.AgregarVenta(venta1);*/
-
-                        /*TiendaApu.ListaVentas.Add(new Venta(TiendaApu.EmpleadoLogueado, auxClienteNuevo.AuxCliente,
-                        this.listaCompras, this.auxMontoTotal));*/
-
-
+                  
                         MessageBox.Show("En Hora buena por ser miembro de la familia Simpson tiene un descuentos del 13%", "Descuento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         double descuento = (auxMontoTotal * 13) / 100;
                         double montoOriginal = auxMontoTotal;
@@ -312,6 +311,7 @@ namespace FrontParcial
 
                     }
 
+                    auxSonido.Play();
                     DialogResult = DialogResult.OK;
                 }
 

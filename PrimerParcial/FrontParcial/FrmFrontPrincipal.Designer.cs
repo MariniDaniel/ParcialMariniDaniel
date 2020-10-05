@@ -33,6 +33,7 @@
             this.btnComprar = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.picPrincipal = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.btnInventario.BackColor = System.Drawing.Color.Transparent;
             this.btnInventario.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnInventario.Location = new System.Drawing.Point(489, 302);
+            this.btnInventario.Location = new System.Drawing.Point(304, 302);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(132, 112);
             this.btnInventario.TabIndex = 10;
@@ -56,7 +57,7 @@
             this.btnComprar.BackColor = System.Drawing.Color.Transparent;
             this.btnComprar.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnComprar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnComprar.Location = new System.Drawing.Point(656, 302);
+            this.btnComprar.Location = new System.Drawing.Point(452, 302);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(132, 112);
             this.btnComprar.TabIndex = 11;
@@ -89,6 +90,20 @@
             this.picPrincipal.TabIndex = 0;
             this.picPrincipal.TabStop = false;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnSalir.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSalir.Location = new System.Drawing.Point(647, 378);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(132, 36);
+            this.btnSalir.TabIndex = 13;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FrmFrontPrincipal
             // 
             this.AllowDrop = true;
@@ -96,6 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.btnInventario);
@@ -107,6 +123,7 @@
             this.Name = "FrmFrontPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenidos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFrontPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FrmFrontPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPrincipal)).EndInit();
             this.ResumeLayout(false);
@@ -119,6 +136,7 @@
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.Button btnVentas;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 
