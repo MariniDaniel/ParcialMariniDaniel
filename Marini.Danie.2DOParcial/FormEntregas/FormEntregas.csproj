@@ -46,34 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormCantidad.cs">
+    <Compile Include="FrmCantidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCantidad.Designer.cs">
-      <DependentUpon>FormCantidad.cs</DependentUpon>
+    <Compile Include="FrmCantidad.Designer.cs">
+      <DependentUpon>FrmCantidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEntregas.cs">
+    <Compile Include="FrmPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEntregas.Designer.cs">
-      <DependentUpon>FormEntregas.cs</DependentUpon>
+    <Compile Include="FrmPedidos.Designer.cs">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPedidos.cs">
+    <Compile Include="FrmEncargo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPedidos.Designer.cs">
-      <DependentUpon>FormPedidos.cs</DependentUpon>
+    <Compile Include="FrmEncargo.Designer.cs">
+      <DependentUpon>FrmEncargo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCantidad.resx">
-      <DependentUpon>FormCantidad.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCantidad.resx">
+      <DependentUpon>FrmCantidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEntregas.resx">
-      <DependentUpon>FormEntregas.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPedidos.resx">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPedidos.resx">
-      <DependentUpon>FormPedidos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEncargo.resx">
+      <DependentUpon>FrmEncargo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,6 +107,9 @@
       <Project>{c5a158f5-2f45-478b-950d-327d3038b00b}</Project>
       <Name>Excepciones</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilustracion-heladeria_53876-59829.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

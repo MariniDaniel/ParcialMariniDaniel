@@ -12,14 +12,14 @@ using Excepciones;
 
 namespace FormEntregas
 {
-    public partial class FormPedidos : Form
+    public partial class FrmEncargo : Form
     {
         Pedido auxPedido;
 
         /// <summary>
         /// Constructor
         /// </summary>
-        public FormPedidos()
+        public FrmEncargo()
         {
             InitializeComponent();
         }
@@ -77,7 +77,7 @@ namespace FormEntregas
                 {
                     auxPedido = new Pedido((Pedido.EHelado)this.cmbTipo.SelectedItem);
                     Inventario.EnPreparacion.Enqueue(auxPedido);
-                    MessageBox.Show("Cargado con exito");
+                    MessageBox.Show("Cargado con exito", "PedidoRealizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                 }
                 else
@@ -86,7 +86,7 @@ namespace FormEntregas
                     {
                         auxPedido = new Pedido((Pedido.EHelado)this.cmbTipo.SelectedItem, Pedido.EEnvio.Si, this.txtDomicilio.Text, this.txtTelefono.Text);
                         Inventario.EnPreparacion.Enqueue(auxPedido);
-                        MessageBox.Show("Cargado con exito");
+                        MessageBox.Show("Cargado con exito", "PedidoRealizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.DialogResult = DialogResult.OK;
                     }
                     else

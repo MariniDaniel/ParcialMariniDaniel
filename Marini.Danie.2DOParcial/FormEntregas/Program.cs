@@ -16,7 +16,7 @@ namespace FormEntregas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormEntregas());
+            Application.Run(new FrmPedidos());
         }
     }
 }

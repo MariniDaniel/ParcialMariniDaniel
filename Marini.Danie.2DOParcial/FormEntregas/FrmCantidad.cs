@@ -11,12 +11,12 @@ using Entidades;
 
 namespace FormEntregas
 {
-    public partial class FormCantidad : Form
+    public partial class FrmCantidad : Form
     {
         /// <summary>
         /// Constructor
         /// </summary>
-        public FormCantidad()
+        public FrmCantidad()
         {
             InitializeComponent();
         }
@@ -40,7 +40,7 @@ namespace FormEntregas
         {
             int respuesta = Inventario.Entregados.CantidadPedidos((Pedido.EHelado)this.cmbTipo.SelectedItem);
 
-            this.lblResultado.Text = String.Format($"Cantidad de pizzas de {this.cmbTipo.SelectedItem.ToString()} entregadas: {respuesta}");
+            this.lblResultado.Text = String.Format($"Cantidad de Helados de {this.cmbTipo.SelectedItem.ToString()} entregadas: {respuesta}");
         }
 
         /// <summary>
@@ -52,5 +52,7 @@ namespace FormEntregas
         {
             this.Close();
         }
+
+      
     }
 }

@@ -15,7 +15,7 @@ namespace FormEntregas
 {
     public delegate bool DelegadoDelivery(Pedido pedido);
 
-    public partial class FormEntregas : Form
+    public partial class FrmPedidos : Form
     {
         Thread hiloActualizar;
         public event DelegadoDelivery delivery;
@@ -25,7 +25,7 @@ namespace FormEntregas
         /// <summary>
         /// Constructor
         /// </summary>
-        public FormEntregas()
+        public FrmPedidos()
         {
             InitializeComponent();
             hiloActualizar = new Thread(this.ActualizarPedidos);
@@ -150,18 +150,18 @@ namespace FormEntregas
             }
             catch (ArchivosException exc)
             {
-                MessageBox.Show(exc.Message);
-                MessageBox.Show(exc.InnerException.Message);
+                MessageBox.Show(exc.Message,"ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exc.InnerException.Message,"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 actualizando = false;
             }
             catch (ThreadAbortException)
-            {
-                MessageBox.Show("Gracias, vuelva prontossss!");
+            {  
+                MessageBox.Show("Gracias, vuelva prontossss!", "Hasta Luego!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 actualizando = false;
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show(exc.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 actualizando = false;
             }
 
@@ -250,7 +250,7 @@ namespace FormEntregas
         /// <param name="e"></param>
         private void btnCargarPedido_Click(object sender, EventArgs e)
         {
-            FormPedidos auxFormPedidos = new FormPedidos();
+            FrmEncargo auxFormPedidos = new FrmEncargo();
 
             if (auxFormPedidos.ShowDialog() == DialogResult.OK)
             {
@@ -270,10 +270,28 @@ namespace FormEntregas
         /// <param name="e"></param>
         private void btnCantPedidos_Click(object sender, EventArgs e)
         {
-            FormCantidad cantidad = new FormCantidad();
+            FrmCantidad cantidad = new FrmCantidad();
             cantidad.Show();
         }
 
+        /// <summary>
+        /// Crea una nueva instancia de formulario para armar pedidos,desde el stripmenu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cargarPedidoNuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnCargarPedido_Click(sender,e);
+        }
 
+        /// <summary>
+        /// Crea una nueva instancia de formulario para armar pedidos ,desde el stripmenu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cantidadDePedidosPorGustoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnCantPedidos_Click(sender, e);
+        }
     }
 }
