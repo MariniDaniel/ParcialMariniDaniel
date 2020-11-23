@@ -1,0 +1,19 @@
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Test One.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Test One.pdb
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Entidades.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Entidades.pdb
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\obj\Debug\Test One.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\obj\Debug\Test One.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\obj\Debug\Test One.csproj.CopyComplete
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\obj\Debug\Test One.dll
+C:\Users\Daniel\Desktop\Parcial\PrimerParcial\Test One\obj\Debug\Test One.pdb
